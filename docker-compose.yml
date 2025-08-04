@@ -1,0 +1,26 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: tonic-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
+  server:
+    build:
+      context: ./server
+    container_name: tonic-server
+    ports:
+      - "5001:5000"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
+    depends_on:
+      - mongo
+    command: npm run dev
+
+volumes:
+  mongo-data:
