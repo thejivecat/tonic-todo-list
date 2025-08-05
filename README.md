@@ -29,3 +29,11 @@ run this command:
 docker compose down --volumes --remove-orphans
 
 ## 🛠️ Frontend Setup
+
+### 1. Install Packages
+
+run npm install in the client folder of this directory
+
+### 2. Run application
+
+run the command npm run dev to start the application
