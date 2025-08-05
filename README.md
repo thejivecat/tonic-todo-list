@@ -34,6 +34,11 @@ docker compose down --volumes --remove-orphans
 
 run npm install in the client folder of this directory
 
+### 1. Create .env
+
+create .env file in the client folder and add:
+VITE_API_BASE_URL=http://localhost:5001/api
+
 ### 2. Run application
 
 run the command npm run dev to start the application

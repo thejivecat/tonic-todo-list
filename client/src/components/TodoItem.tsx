@@ -19,7 +19,7 @@ const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
           onClick={() => onToggle(todo._id, !todo.completed)}
           className="text-sm text-blue-400 hover:underline"
         >
-          {todo.completed ? 'Undo' : 'Complete'}
+          {todo.completed ? 'Mark Incomplete' : 'Complete'}
         </button>
         <button
           onClick={() => onDelete(todo._id)}
